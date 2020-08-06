@@ -24,11 +24,11 @@
 
 function mapArray(array) {
   'use strict';
-  const numbers = new Array(array.length);
+  let numbers = new Array(array.length);
 
   for (let i = 0; i < array.length; i += 1) {
     // Write code under this line
-    numbers = numbers[i] * 10;
+    numbers[i] = array[i] * 10;
   }
 
   return numbers;
@@ -39,3 +39,12 @@ console.log(mapArray([-2, 0, 2]));
 
 console.log(mapArray([-2.5, 0, 2.5]));
 [-25, 0, 25];
+
+// Этапы
+// Код должен содержать функцию mapArray
+// Результатом вызова функции mapArray должен быть массив
+// Результатом вызова функции mapArray должен быть пустой массив, если аргумент - пустой массив
+// Для аргумента - массива[-2, 0, 2] результатом будет массив[-20, 0, 20]
+// Для аргумента - массива[-2.5, 0, 2.5] результатом будет массив[-25, 0, 25]
+// Ожидается использование 'array.length'
+// Ожидается использование 'new Array'
