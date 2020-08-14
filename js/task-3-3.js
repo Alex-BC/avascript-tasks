@@ -6,12 +6,19 @@ const findBestEmployee = function (employees) {
   'use strict';
   // Write code under this line
 
-  //   const values = Object.values(findBestEmployee);
-  for (const employee of employees) {
-    console.log(employee);
+  let maxTasks = 0;
+  let bestEmployee = '';
+
+  const keys = Object.keys(employees);
+
+  for (const key of keys) {
+    if (employees[key] > maxTasks) {
+      bestEmployee = key;
+      maxTasks = employees[key];
+    }
   }
 
-  //   return;
+  return bestEmployee;
 };
 
 // Объекты и ожидаемый результат
@@ -40,3 +47,11 @@ const sellers = {
 };
 console.log(findBestEmployee(sellers));
 // 'lux'
+
+// Этапы
+// Ожидается что findBestEmployee является функцией
+// Ожидается что функция вернет пустую строку для пустого объекта
+// Ожидается что функция вернет 'a' для объекта { a: 1 }
+// Ожидается что функция вернет 'lorence' для объекта 'developers'
+// Ожидается что функция вернет 'mango' для объекта 'supports'
+// Ожидается что функция вернет 'lux' для объекта 'sellers'
