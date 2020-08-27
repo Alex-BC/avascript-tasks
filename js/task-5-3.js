@@ -14,7 +14,18 @@ class Storage {
     this.items = items;
   }
   getItems(goods) {
-    return;
+    return this.items;
+  }
+
+  addItem(item) {
+    this.items.push(item);
+  }
+
+  removeItem(item) {
+    const index = this.items.indexOf(item);
+    if (index > 0) {
+      this.items.splice(index, 1);
+    }
   }
 }
 
@@ -25,7 +36,7 @@ const goods = ['Нанитоиды', 'Пролонгер', 'Железные ж�
 
 const storage = new Storage(goods);
 
-// console.log(storage.getItems());
+console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Пролонгер',
@@ -33,8 +44,8 @@ const storage = new Storage(goods);
   'Антигравитатор'
 ] */
 
-// storage.addItem('Дроид');
-// console.log(storage.getItems());
+storage.addItem('Дроид');
+console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Пролонгер',
@@ -43,8 +54,8 @@ const storage = new Storage(goods);
   'Дроид'
 ] */
 
-// storage.removeItem('Пролонгер');
-// console.log(storage.getItems());
+storage.removeItem('Пролонгер');
+console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Железные жупи',
