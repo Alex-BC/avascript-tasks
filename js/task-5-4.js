@@ -10,6 +10,25 @@
 // Метод pad(str) - получает параметр str(строку) и добавляет ее в начало и в конец _value
 // Метод pad должен использовать методы append и prepend
 
+// Дано
+// Write code under this line
+
+// console.log(typeof StringBuilder);
+// 'function'
+
+// const builder = new StringBuilder('.');
+
+// builder.append('^');
+// console.log(builder.value); // '.^'
+
+// builder.prepend('^');
+// console.log(builder.value); // '^.^'
+
+// builder.pad('=');
+// console.log(builder.value); // '=^.^='
+
+// Решение
+
 // Write code under this line
 
 class StringBuilder {

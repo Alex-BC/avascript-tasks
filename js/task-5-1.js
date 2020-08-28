@@ -4,6 +4,21 @@
 
 // В prototype функции - конструктора добавь метод getInfo(), который возвращает строку со значениями свойств login и email объекта.
 
+// Дано
+// Write code under this line
+
+//console.log(typeof Account.prototype.getInfo);
+// 'function'
+
+// const mango = new Account( 'Mangozedog', 'mango@dog.woof');
+//console.log(mango.getInfo());
+// 'login : Mangozedog, email: mango@dog.woof'
+
+// const poly = new Account( 'Poly', 'poly@mail.com');
+//console.log(poly.getInfo());
+// 'login : Poly, email: poly@mail.com'
+
+// Решение
 // Write code under this line
 const Account = function (login, email) {
   this.login = login;
