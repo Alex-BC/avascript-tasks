@@ -96,9 +96,7 @@ const users = [
 ];
 
 // Write code under this line
-const getInactiveUsers = array => array.filter(users) {
-    console.log(users.isActive); 
-};
+const getInactiveUsers = array => array.filter(({ isActive }) => !isActive);
 
 console.log(getInactiveUsers(users));
 
@@ -140,3 +138,16 @@ console.log(getInactiveUsers(users));
     age: 38,
   }
 ]; */
+
+// Этапы
+// Код должен содержать функцию getInactiveUsers
+// Результат вызова функции getInactiveUsers должен быть массивом
+// Результат должен быть пустым массивом, если исходный массив также пустой
+// Ожидается массив объектов со значением свойства 'isActive' равным 'false' из исходного массива users
+// Ожидается массив объектов со значением свойства 'isActive' равным 'false' из случайного исходного массива
+// Ожидается использование метода 'filter'
+// Запрещается использовать циклы 'for' или 'forEach' внутри функции
+// Запрещается использовать 'push' внутри функции
+// Запрещается метод 'splice' внутри функции
+// Ожидается использование деструктурирущего присваивания - ({ isActive })
+// Использование оператора!
