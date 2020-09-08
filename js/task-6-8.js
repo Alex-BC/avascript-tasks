@@ -107,10 +107,24 @@ const users = [
 // Решение
 
 // Write code under this line
-const getUsersWithFriend = (array, friendName) => array;
+const getUsersWithFriend = (array, friendName) =>
+  array
+    .filter(({ friends }) => friends.includes(friendName))
+    .map(({ name }) => name);
 
 console.log(getUsersWithFriend(users, 'Briana Decker'));
 // [ 'Sharlene Bush', 'Sheree Anthony' ]
 
 console.log(getUsersWithFriend(users, 'Goldie Gentry'));
 // [ 'Elma Head', 'Sheree Anthony' ]
+
+// Этапы
+// Код должен содержать функцию getUsersWithFriend
+// Если значение не найдено, то вызов функции getUsersWithFriend должен возвращать пустой массив.
+// Вызов функции getUsersWithFriend(users, 'Briana Decker') должен возвращать['Sharlene Bush', 'Sheree Anthony'].
+// Вызов функции getUsersWithFriend(users, 'Goldie Gentry') должен возвращать['Elma Head', 'Sheree Anthony'].
+// Запрещается использовать циклы 'for' или 'forEach' внутри функции
+// Запрещается использовать 'push' внутри функции
+// Запрещается метод 'splice' внутри функции
+// Ожидается использование деструктурирущего присваивания - { friends }
+// Ожидается использование деструктурирущего присваивания - { name }
