@@ -103,13 +103,18 @@ const users = [
 
 // Решение
 
-// Write code under this line
-const calculateTotalBalance = users.reduce(
-  (total, user) => total + user.balance,
-  0,
-);
+const calculateTotalBalance = array =>
+  array.reduce((total, { balance }) => total + balance, 0);
 
-console.log(calculateTotalBalance);
-
-// console.log(calculateTotalBalance(users));
+console.log(calculateTotalBalance(users));
 // 20916
+
+// Этапы
+// Код должен содержать функцию calculateTotalBalance
+// Вызов функции calculateTotalBalance([{ balance: 0 }]) должен возвращать 0
+// Вызов функции calculateTotalBalance(users) должен возвращать 20916
+// Вызов функции со случайным набором данных calculateTotalBalance(users) должен возвращать сумму значений balance
+// Запрещается использовать циклы 'for' или 'forEach' внутри функции
+// Запрещается использовать 'push' внутри функции
+// Запрещается метод 'splice' внутри функции
+// Ожидается использование деструктурирущего присваивания - { balance }
